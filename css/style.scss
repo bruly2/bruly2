@@ -1,0 +1,76 @@
+$primary-color : #212529;
+$bg-color: #fff7e4;
+/* Dark-mode */
+$primary-color-dark : #fff7e4;
+$bg-color-dark: #212529;
+
+@use "sass:color";
+
+body {
+    background-color: $bg-color;
+    color: $primary-color;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    font-size: 16px;
+    font-family: 'Anek Malayalam', sans-serif;
+    font-weight: 300;
+
+}
+
+body.dark-theme {
+    transition: 1s;
+    background-color: $bg-color-dark;
+    color: $primary-color-dark;
+    a {
+        color: $primary-color-dark;
+        transition: 1s;
+        &:hover {
+            color: color.adjust($primary-color-dark, $lightness: 80%);
+        }
+    }
+}
+
+a {
+    font-weight: 200;
+    color: $primary-color;
+    &:hover {
+        color: color.adjust($primary-color, $lightness: -80%);
+    }
+}
+
+strong {
+    font-weight: 600;
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 1.1rem;
+    margin-bottom: .2rem;
+}
+
+ul {
+    list-style: none;
+    padding-left: .5rem;
+    margin-bottom: 1.3rem;
+    li {
+        padding-left: 0;
+    }
+}
+
+a.btn-darkmode {
+    width: fit-content;
+    display: inline;
+    &:hover {
+        text-decoration: none;
+    }
+}

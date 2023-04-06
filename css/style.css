@@ -1,0 +1,69 @@
+/* Dark-mode */
+body {
+  background-color: #fff7e4;
+  color: #212529;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+  font-size: 16px;
+  font-family: "Anek Malayalam", sans-serif;
+  font-weight: 300;
+}
+
+body.dark-theme {
+  transition: 1s;
+  background-color: #212529;
+  color: #fff7e4;
+}
+body.dark-theme a {
+  color: #fff7e4;
+  transition: 1s;
+}
+body.dark-theme a:hover {
+  color: white;
+}
+
+a {
+  font-weight: 200;
+  color: #212529;
+}
+a:hover {
+  color: black;
+}
+
+strong {
+  font-weight: 600;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0.5rem;
+  margin-bottom: 1.3rem;
+}
+ul li {
+  padding-left: 0;
+}
+
+a.btn-darkmode {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: inline;
+}
+a.btn-darkmode:hover {
+  text-decoration: none;
+}/*# sourceMappingURL=style.css.map */
