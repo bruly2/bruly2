@@ -2,6 +2,7 @@ $primary-color : #212529;
 $bg-color: #fff7e4;
 $primary-color-dark : #fff7e4;
 $bg-color-dark: #212529;
+$transition-time: .7s;
 
 @use "sass:color";
 
@@ -17,16 +18,16 @@ body {
     font-size: 16px;
     font-family: 'Anek Malayalam', sans-serif;
     font-weight: 300;
-    padding: 0 30px
+    padding: 0 30px;
+    transition: $transition-time;
 }
 
 body.dark-theme {
-    transition: 1s;
+    transition: $transition-time;
     background-color: $bg-color-dark;
     color: $primary-color-dark;
     a {
         color: $primary-color-dark;
-        transition: 1s;
         &:hover {
             color: color.adjust($primary-color-dark, $lightness: 80%);
         }
@@ -36,6 +37,7 @@ body.dark-theme {
 a {
     font-weight: 200;
     color: $primary-color;
+    transition: $transition-time;
     &:hover {
         color: color.adjust($primary-color, $lightness: -80%);
     }
